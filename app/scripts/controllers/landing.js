@@ -2,11 +2,16 @@
 
 /**
  * @ngdoc function
- * @name qwickeatsApp.controller:MainCtrl
+ * @name qwickeatsApp.controller:LandingCtrl
  * @description
- * # MainCtrl
+ * # LandingCtrl
  * Controller of the qwickeatsApp
  */
 angular.module('qwickeatsApp')
-  .controller('LandingCtrl', function () {
+  .controller('LandingCtrl', function ($scope) {
+    $scope.awesomeThings = [
+      'HTML5 Boilerplate',
+      'AngularJS',
+      'Karma'
+    ];
   });
