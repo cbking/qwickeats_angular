@@ -11,7 +11,7 @@ angular.module('qwickeatsApp')
     return {
       templateUrl: 'views/geolocator.html',
       restrict: 'E',
-      link: function postLink(scope, element) {
+      link: function postLink() {
       	//element.text('This link function overrides the templateUrl injection');
       }
     };
