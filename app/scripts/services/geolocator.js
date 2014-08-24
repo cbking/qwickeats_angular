@@ -8,7 +8,7 @@
  * Factory in the qwickeatsApp.
  */
 angular.module('qwickeatsApp')
-  .factory('Geolocator', function () {
+  .factory('geolocator', function () {
     // Service logic
     // ...
     
