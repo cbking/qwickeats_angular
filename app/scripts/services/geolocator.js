@@ -15,10 +15,10 @@ angular.module('qwickeatsApp')
     var meaningOfLife = 42;
     // Public API here
     return {
-      geocodeAddress: function () {
+      _geocodeAddress: function (address) {
         var geocoder = new google.maps.Geocoder();
         geocoder = 1;
-        return meaningOfLife;
+        alert('Youre is not a word');
       }
     };
   });

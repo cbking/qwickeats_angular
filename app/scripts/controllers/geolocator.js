@@ -8,15 +8,15 @@
  * Controller of the qwickeatsApp
  */
 angular.module('qwickeatsApp')
-  .controller('GeolocatorCtrl', function ($scope) {
+  .controller('GeolocatorCtrl',['$scope', 'geolocator', function ($scope, geo) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate'
     ];
 
     $scope.address = '';
 
-    $scope.geocodeAddress =  function (address)
+    $scope.geocodeAddress =  function ()
     {
-    	console.log(address)	
+    	geo._geocodeAddress();
     };
-  });
+  }]);
