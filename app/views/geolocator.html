@@ -1,4 +1,7 @@
-<h3>This is the Geolocator Directive</h3>
+<div ng-controller="GeolocatorCtrl">
+	<h3>This is the Geolocator Directive</h3>
 
-<input id="autocomplete" placeholder="Enter your address" type="text" class="form-control input-md">
+	<input ng-model=address id="autocomplete" placeholder="Enter your address" type="text" class="form-control input-md">
+	<button ng-click='geocodeAddress(address)' type="button" class="btn btn-primary">Search For Food Nearby</button>
 
+</div>
