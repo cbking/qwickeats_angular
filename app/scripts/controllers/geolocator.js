@@ -15,8 +15,10 @@ angular.module('qwickeatsApp')
 
     $scope.address = '';
 
-    $scope.geocodeAddress =  function ()
+    $scope.geocodeError = false;
+
+    $scope.geocodeAddress =  function (address)
     {
-    	geo._geocodeAddress();
+    	geo._geocodeAddress(address);
     };
   }]);

@@ -12,13 +12,15 @@ angular.module('qwickeatsApp')
     // Service logic
     // ...
     
-    var meaningOfLife = 42;
     // Public API here
     return {
       _geocodeAddress: function (address) {
         var geocoder = new google.maps.Geocoder();
-        geocoder = 1;
-        alert('Youre is not a word');
+        // Call to Google Geocoding API
+        geocoder.geocode({ address : address }, function (result, status) {
+          console.log(result);
+          console.log(status);
+        });
       }
     };
   });

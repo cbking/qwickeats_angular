@@ -1,6 +1,8 @@
 <div ng-controller="GeolocatorCtrl">
-	<h3>This is the Geolocator Directive</h3>
 
+	<div ng-show="geocodeError">
+		We could not find that address
+	</div>
 	<input ng-model=address id="autocomplete" placeholder="Enter your address" type="text" class="form-control input-md">
 	<button ng-click='geocodeAddress(address)' type="button" class="btn btn-primary">Search For Food Nearby</button>
 
