@@ -5,6 +5,7 @@ describe('Directive: geolocator', function () {
   // load the directive's module
   beforeEach(module('qwickeatsApp'));
 
+
   var element,
     scope;
   // This needs to be there in order to load the view in my tests
