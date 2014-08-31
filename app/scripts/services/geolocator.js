@@ -19,15 +19,6 @@ angular.module('qwickeatsApp')
         var deferred = $q.defer();
         var geocoder = new google.maps.Geocoder();
 
-        // var result = {
-        //   type: 'not_defined',
-        //   message: '',
-        //   payload: 
-        //     {
-        //       lat: 0.0000,
-        //       lon: 0.0000
-        //     }
-        // };
 
         // Call to Google Geocoding API
         geocoder.geocode({ address : address }, function (result, status) {

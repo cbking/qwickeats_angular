@@ -8,7 +8,7 @@
  * Controller of the qwickeatsApp
  */
 angular.module('qwickeatsApp')
-  .controller('GeolocatorCtrl',['$scope', 'geolocator', function ($scope, geo) {
+  .controller('GeolocatorCtrl',['$scope', 'geolocator', 'flash', function ($scope, geo, flashFactory) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate'
     ];
@@ -16,6 +16,8 @@ angular.module('qwickeatsApp')
     $scope.address = '';
 
     $scope.geocodeError = false;
+
+    $scope.flash = flashFactory;
 
     $scope.geocodeAddress =  function (address)
     {
@@ -25,8 +27,13 @@ angular.module('qwickeatsApp')
         console.log('Success');
         console.log(success);
       }, function(failure){
+        flashFactory.setMessage('Could not geocode that address');
         console.log('failure');
         console.log(failure);
       });
+
+      
+
+
     };
   }]);
