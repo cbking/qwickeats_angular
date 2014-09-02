@@ -3,7 +3,8 @@
 /**
  * @ngdoc function
  * @name qwickeatsApp.controller:GeolocatorCtrl
- * @description
+ * @description this is the controller associated with the geocoding directive 
+ * depends on the geolocator service
  * # GeolocatorCtrl
  * Controller of the qwickeatsApp
  */
@@ -35,6 +36,5 @@ angular.module('qwickeatsApp')
         console.log('failure');
         console.log(failure);
       });
-
     };
   }]);
