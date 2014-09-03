@@ -23,6 +23,9 @@ angular
         templateUrl: 'views/landing.html',
         controller: 'LandingCtrl'
       })
+      .when('/restaurants/:location', {
+        templateUrl: 'views/search.html',
+      })
       .otherwise({
         redirectTo: '/'
       });
