@@ -33,7 +33,8 @@ module.exports = function(config) {
       'app/scripts/**/*.js',
       'test/mock/**/*.js',
       'test/spec/**/*.js',
-      'app/views/*.html'
+      'app/views/*.html',
+      'https://maps.googleapis.com/maps/api/js?sensor=false"'
     ],
 
     // list of files / patterns to exclude
