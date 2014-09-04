@@ -16,11 +16,13 @@ angular.module('qwickeatsApp')
 
         var deferred = $q.defer();
 
-        console.log(location);
+        console.log(location.hash.substring(2));
+        console.log(decodeURI(location.pathname.replace('%3F','?')));
+
 
         var request = $http({
             method: 'get',
-            url: 'http://localhost:8888/api/v1/restaurants?location=%7B%22lat%22:18.0159925,%22lng%22:-76.76255650000002%7D'
+            url: 'http://localhost:8888/api/v1/' + decodeURI(location.hash.substring(2).replace('%3F','?'))
         });
 
         request.then(function (success) {

@@ -28,7 +28,7 @@ angular.module('qwickeatsApp')
         $scope.errorMessage = '';
         console.log('Success');
         console.log(success);
-        location.path('/restaurants/?location=' + JSON.stringify(success));
+        location.path('/restaurants?location=' + JSON.stringify(success));
       }, function(failure){
         $scope.geocodeError = true;
         $scope.errorMessage = 'Could not geocode that address, please try again';

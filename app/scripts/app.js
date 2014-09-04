@@ -17,13 +17,15 @@ angular
     'ngSanitize',
     'ngTouch'
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, $locationProvider) {
+    $locationProvider.html5Mode(false);
+
     $routeProvider
       .when('/', {
         templateUrl: 'views/landing.html',
         controller: 'LandingCtrl'
       })
-      .when('/restaurants/:location', {
+      .when('/restaurants:location', {
         templateUrl: 'views/search.html',
         controller: 'SearchCtrl',
         resolve : {
