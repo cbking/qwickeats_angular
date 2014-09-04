@@ -18,7 +18,7 @@ angular
     'ngTouch'
   ])
   .config(function ($routeProvider, $locationProvider) {
-    $locationProvider.html5Mode(true);
+    $locationProvider.html5Mode(false);
 
     $routeProvider
       .when('/', {
