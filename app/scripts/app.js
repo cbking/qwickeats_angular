@@ -23,6 +23,16 @@ angular
         templateUrl: 'views/landing.html',
         controller: 'LandingCtrl'
       })
+      .when('/restaurants/:location', {
+        templateUrl: 'views/search.html',
+        controller: 'SearchCtrl',
+        resolve : {
+          restaurantList : function (restaurants)
+          {
+            return restaurants.listRestaurants(location);
+          }
+        }
+      })
       .otherwise({
         redirectTo: '/'
       });

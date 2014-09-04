@@ -1,0 +1,19 @@
+'use strict';
+
+describe('Controller: GeolocatorCtrl', function () {
+
+  // load the controller's module
+  beforeEach(module('qwickeatsApp'));
+
+  var GeolocatorCtrl,
+    scope;
+
+  // Initialize the controller and a mock scope
+  beforeEach(inject(function ($controller, $rootScope) {
+    scope = $rootScope.$new();
+    GeolocatorCtrl = $controller('GeolocatorCtrl', {
+      $scope: scope
+    });
+  }));
+
+});

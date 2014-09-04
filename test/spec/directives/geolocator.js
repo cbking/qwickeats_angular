@@ -5,6 +5,7 @@ describe('Directive: geolocator', function () {
   // load the directive's module
   beforeEach(module('qwickeatsApp'));
 
+
   var element,
     scope;
   // This needs to be there in order to load the view in my tests
@@ -13,6 +14,7 @@ describe('Directive: geolocator', function () {
   beforeEach(inject(function ($rootScope) {
     scope = $rootScope.$new();
   }));
+  
 
   // Test that the template directive is loading
   it('should load the templateUrl into the directive', inject(function ($compile) {
