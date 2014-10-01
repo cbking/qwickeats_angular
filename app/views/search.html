@@ -1,2 +1,27 @@
+<div ng-repeat="restaurant in restaurantList">
+	<br>
+	<div class="row" id="restaurants_list_item">
+		<div class="col-sm-12">
+			<div class="well clearfix">
+				<a class="pull-left" href="#">
+					<img class="media-object" src="http://s1.seamless.com/-/ri/vl/11898/93/60?fs=1">
+				</a>
+				<div class="pull-right aligncenter" href="#">
+					Button To Menu Here
+				</div>
+				<div class="media-body">
+					<h3 class="media-heading" id="restaurant_title">{{ restaurant.name }}</h3>
+					<ul >
+						<li><i class="glyphicon glyphicon-time pull-left"></i> <span id="restaurant_info">Opening Hours:</span></li>
+						<li><i class="glyphicon glyphicon-flag pull-left"></i> <span id="restaurant_info">{{ restaurant.phone_number }}</span></li>
+						<li><i class="glyphicon glyphicon-flag pull-left"></i> <span id="restaurant_info">{{ restaurant.address.line1 }}</span></li>
+						<li><i class="glyphicon glyphicon-fire pull-left"></i> <span id="restaurant_info"> {{ restaurant.cuisine}}</span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
-{{restaurantList}}
+
+
