@@ -9,7 +9,7 @@
  * Controller of the qwickeatsApp
  */
 angular.module('qwickeatsApp')
-  .controller('GeolocatorCtrl',['$scope', 'geolocator', '$location', function ($scope, geo, location) {
+  .controller('GeolocatorCtrl',['$scope', 'geolocator', '$q', function ($scope, geo , q) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate'
     ];
@@ -20,20 +20,29 @@ angular.module('qwickeatsApp')
 
     $scope.geocodeError = false;
 
-
-    $scope.geocodeAddress =  function (address)
+    $scope.addAddress = function (address)
     {
-      geo._geocodeAddress(address).then(function (success){
-        $scope.geocodeError = false;
-        $scope.errorMessage = '';
-        console.log('Success');
-        console.log(success);
-        location.path('/restaurants?location=' + JSON.stringify(success));
-      }, function(failure){
-        $scope.geocodeError = true;
-        $scope.errorMessage = 'Could not geocode that address, please try again';
-        console.log('failure');
-        console.log(failure);
-      });
+      geo.pushAddressToQueue(address);
     };
+
+
+    $scope.geocodeAddresses =  function ()
+    {
+
+       var promises = geo.geocodeAddresses();
+
+       q.all(promises).then(function(data) {
+          console.log('promises are all finished');
+          console.log(data);
+            // called when all promises have been resolved successully
+        });
+      };
+    //   geo.geocodeAddresses.then(function (success)
+    //   {
+    //     console.log(success);
+    //   }, function (failure)
+    //   {
+    //     console.log(failure);
+    //   });
+    // };
   }]);
