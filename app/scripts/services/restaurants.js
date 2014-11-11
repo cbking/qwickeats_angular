@@ -12,6 +12,7 @@ angular.module('qwickeatsApp')
 
     // Public API here
     return {
+      // Return a listing of the restaurants based on the search
       listRestaurants: function (location) {
 
         var deferred = $q.defer();
@@ -32,6 +33,27 @@ angular.module('qwickeatsApp')
           });
 
         return deferred.promise;
+      },
+      // Get the data related to a specific restaurant
+      showRestaurant: function (restId) {
+
+        var deferred  = $q.defer();
+
+        var request = $http({
+          method: 'get',
+          url: 'http://localhost:8888/api/v1/' + restId
+        });
+
+        request.then(function (success){
+          deferred.resolve(success);
+        }, function (failure){
+          deferred.reject(failure);
+        });
+
+        return deferred.promise;
+
       }
+
+
     };
   }]);
