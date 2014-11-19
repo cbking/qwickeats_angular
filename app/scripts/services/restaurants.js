@@ -41,7 +41,7 @@ angular.module('qwickeatsApp')
 
         var request = $http({
           method: 'get',
-          url: 'http://localhost:8888/api/v1/' + restId
+          url: 'http://localhost:8888/api/v1/restaurants/' + restId
         });
 
         request.then(function (success){

@@ -10,5 +10,13 @@
 angular.module('qwickeatsApp')
   .controller('SearchCtrl',['$scope','restaurantList', function ($scope, r) {
 
+  	$scope.showRestaurant = function (menuId)
+  	{
+
+  	};
+
+
+
+
   	$scope.restaurantList = r.data;
   }]);
