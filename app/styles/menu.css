@@ -22,3 +22,19 @@ a
 	font-family: 'Playfair Display SC', serif;
 	font-size: 18px;
 }
+
+#option_instructions
+{
+text-align: left;
+font-family: 'Playfair Display SC', serif;
+font-size: 8px;
+font-style: italic;
+}
+
+#menu_item_option 
+{
+font-size: 10px;
+font-family: 'Playfair Display SC', serif;
+}
+
+
