@@ -35,6 +35,16 @@ angular
           }
         }
       })
+      .when('/restaurants/menu:id', {
+        templateUrl: 'views/menu.html',
+        controller: 'MenuCtrl',
+        resolve : {
+          menuData : function (restaurants)
+          { 
+            return restaurants.showRestaurant(location);
+          }
+        }
+      })
       .otherwise({
         redirectTo: '/'
       });

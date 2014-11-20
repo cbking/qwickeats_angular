@@ -13,7 +13,5 @@ angular.module('qwickeatsApp')
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
-    ];
-
-    
+    ];    
   });
