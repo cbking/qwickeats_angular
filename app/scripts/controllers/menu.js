@@ -12,9 +12,13 @@ angular.module('qwickeatsApp')
     $scope.menu = menu.data;
 
     $scope.menuItemOptions = '';
+    $scope.itemPrice = 0;
 
-    $scope.getMenuItemOptions = function (meneItemName)
+    $scope.getMenuItemOptions = function (categoryIndex, menuItemIndex ,menuItemName)
     {
-    	console.log(meneItemName);
+			// Uses data from the view to get the correct data for the menu item    	
+    	$scope.menuItemOptions = menu.data.categories[categoryIndex].menu_items[menuItemIndex].menu_item_options;
+    	$scope.itemPrice = menu.data.categories[categoryIndex].menu_items[menuItemIndex].price;
     };
+    
   }]);

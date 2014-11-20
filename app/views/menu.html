@@ -27,7 +27,7 @@
 		<div class="row">
 			<span ng-repeat="(menu_item_index, menu_item) in category.menu_items">
 				<div id="menu_item" class="col-md-3">
-				<a data-target="#myModal" data-toggle="modal" href="">{{menu_item.name}}</a>
+				<a data-target="#myModal" data-toggle="modal" ng-click="getMenuItemOptions(category_index, menu_item_index,menu_item.name)" href="">{{menu_item.name}}</a>
 				</div>
 				<div id="menu_price" class="col-md-3">${{menu_item.price}}</div>
 			</span>
