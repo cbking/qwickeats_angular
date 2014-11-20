@@ -8,11 +8,17 @@
         <h4 class="modal-title" id="menu_item_title">{{selectedMenuItem}} <span id="modal_header_price">${{selecteditemPrice}}</span></h4>
       </div>
       <div class="modal-body" id="menu_item_body">
-      	<div ng-repeat="(menu_item_option_index, menu_item_option) in selectedmenuItemOptions">
+      	<span ng-repeat="(menu_item_option_index, menu_item_option) in selectedmenuItemOptions">
       		<span ng-hide="true"> {{menu_item_option.name}} </span>
-     			<div id="menu_item_modal" class="col-md-12">{{menu_item_option.name}}<span id="option_instructions"> {{menu_item_option.instructions}}</span></div>
-      		
-      	</div>
+     			<div id="menu_item_modal" class="col-md-12">{{menu_item_option.name}}<span id="option_instructions">{{menu_item_option.instructions}}</span></div>
+      		<div id="menu_item_choices" class="row">
+      			<span ng-repeat="(menu_item_option_choice_index, menu_item_option_choice) in menu_item_option.item_options">
+      				<div id="menu_item_option" class="col-md-4">
+      					{{menu_item_option_choice.name}}
+      				</div>
+      			</span>
+      		</div>
+      	</span>
         <i class="fa fa-gear fa-4x fa-spin"></i>
       </div>
       <div class="modal-footer">
