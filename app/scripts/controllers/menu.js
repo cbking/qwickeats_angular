@@ -9,6 +9,12 @@
  */
 angular.module('qwickeatsApp')
   .controller('MenuCtrl',['$scope','menuData',function ($scope, menu) {
-
     $scope.menu = menu.data;
+
+    $scope.menuItemOptions = '';
+
+    $scope.getMenuItemOptions = function (meneItemName)
+    {
+    	console.log(meneItemName);
+    };
   }]);
