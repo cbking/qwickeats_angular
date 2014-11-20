@@ -14,7 +14,13 @@
       		<div id="menu_item_choices" class="row">
       			<span ng-repeat="(menu_item_option_choice_index, menu_item_option_choice) in menu_item_option.item_options">
       				<div id="menu_item_option" class="col-md-4">
-      					{{menu_item_option_choice.name}}
+      					<span ng-if="menu_item_option.required == true">
+      						<input type="radio" value="menu_item_option_choice.name"></input> {{menu_item_option_choice.name}}
+      					</span>
+      					<span ng-if="menu_item_option.required == false">
+      						<input type="checkbox" value="menu_item_option_choice.name"></input> {{menu_item_option_choice.name}}
+      					</span>
+      					${{menu_item_option_choice.price}}
       				</div>
       			</span>
       		</div>
