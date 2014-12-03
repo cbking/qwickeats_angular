@@ -9,7 +9,7 @@
 angular.module('qwickeatsApp')
   .directive('cart', function () {
     return {
-      templateUrl: 'views/geolocator.html',
+      templateUrl: 'views/cart.html',
       restrict: 'E',
       link: function postLink() {
       	// scope, element, attrs
