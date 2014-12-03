@@ -15,10 +15,17 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'LocalStorageModule'
   ])
-  .config(function ($routeProvider, $locationProvider) {
+  .config(function ($routeProvider, $locationProvider, localStorageServiceProvider) {
     $locationProvider.html5Mode(false);
+
+    localStorageServiceProvider
+    .setPrefix('qwickeatsApp')
+    .setStorageType('sessionStorage')
+    .setNotify(true, true);
+
 
     $routeProvider
       .when('/', {
