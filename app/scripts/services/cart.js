@@ -8,7 +8,7 @@
  * Factory in the qwickeatsApp.
  */
 angular.module('qwickeatsApp')
-  .factory('cart', function () {
+  .factory('cart', function (localStorageService) {
     // Service logic
     // ...
 
@@ -16,7 +16,8 @@ angular.module('qwickeatsApp')
 
     // Public API here
     return {
-      addToCart: function () {
+      addToCart: function (cartItem) {
+        // Need to grab the old cart here
         return meaningOfLife;
       }
     };
