@@ -1,6 +1,5 @@
 #left-panel {
-    position: absolute;
-    top: 49px;
-    left: 0px;
-    z-index: 1002;
+	display: inline-block;
 }
+
+

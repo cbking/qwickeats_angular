@@ -1,6 +1,5 @@
 <link rel="stylesheet" type="text/css" media="screen" href="/styles/menu.css">
 
-<cart></cart>
 
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -49,21 +48,30 @@
 	</div>
 </div>	
 
-<span id="menu_data" ng-repeat="(category_index, category) in menu.categories">
-	<div class="well clearfix">
-		<div class="row" id="restaurants_list_item">
-		<div id="menu_category" class="col-sm-12">
-		{{ category.name }}
-		</div>
-		<div class="row">
-			<span ng-repeat="(menu_item_index, menu_item) in category.menu_items">
-				<div id="menu_item" class="col-md-3">
-				<a data-target="#myModal" data-toggle="modal" ng-click="getMenuItemOptions(category_index, menu_item_index,menu_item.name)" href="">{{menu_item.name}}</a>
+
+<span class="row">
+
+	<cart class="col-md-3"></cart>
+
+	<span class="col-md-9">
+		<span ng-repeat="(category_index, category) in menu.categories">
+			<div id="menu_data" class="well clearfix">
+				<div class="row" id="restaurants_list_item">
+				<div id="menu_category" class="col-sm-12">
+				{{ category.name }}
 				</div>
-				<div id="menu_price" class="col-md-3">${{menu_item.price}}</div>
-			</span>
-		<div>
-	</div>
+				<div class="row">
+					<span ng-repeat="(menu_item_index, menu_item) in category.menu_items">
+						<div id="menu_item" class="col-md-3">
+						<a data-target="#myModal" data-toggle="modal" ng-click="getMenuItemOptions(category_index, menu_item_index,menu_item.name)" href="">{{menu_item.name}}</a>
+						</div>
+						<div id="menu_price" class="col-md-3">${{menu_item.price}}</div>
+					</span>
+				<div>
+			</div>
+		</span>
+	</span>
+
 </span>
 
 
