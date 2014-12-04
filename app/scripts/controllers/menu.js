@@ -20,7 +20,6 @@ angular.module('qwickeatsApp')
 
     $scope.cleanUpOptional = function ()
     {
-        console.log($scope.optional);
         for (var item in $scope.optional)
         {
             if ($scope.optional[item] === false)
@@ -28,9 +27,15 @@ angular.module('qwickeatsApp')
               delete $scope.optional[item];
             } 
         }
-        $scope.$apply;
-        console.log($scope.optional);
     };
+
+    $scope.cleanUpRequired = function (itemName, itemPrice)
+    {
+        $scope.required = {}
+        $scope.required[itemName] = itemPrice;
+        console.log(itemName);
+        console.log(itemPrice);
+    }
 
     $scope.getMenuItemOptions = function (categoryIndex, menuItemIndex ,menuItemName)
     {
