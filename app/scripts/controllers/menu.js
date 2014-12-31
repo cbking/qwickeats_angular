@@ -29,13 +29,13 @@ angular.module('qwickeatsApp')
         }
     };
 
-    $scope.cleanUpRequired = function (itemName, itemPrice)
-    {
-        $scope.required = {}
-        $scope.required[itemName] = itemPrice;
-        console.log(itemName);
-        console.log(itemPrice);
-    }
+    // $scope.cleanUpRequired = function (categoryName,itemName, itemPrice)
+    // {
+    //     // $scope.required[categoryName] = {};
+    //     // $scope.required[categoryName][itemName] = itemPrice;
+    //     console.log(itemName);
+    //     console.log(itemPrice);
+    // };
 
     $scope.getMenuItemOptions = function (categoryIndex, menuItemIndex ,menuItemName)
     {
