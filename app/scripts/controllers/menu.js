@@ -29,14 +29,6 @@ angular.module('qwickeatsApp')
         }
     };
 
-    // $scope.cleanUpRequired = function (categoryName,itemName, itemPrice)
-    // {
-    //     // $scope.required[categoryName] = {};
-    //     // $scope.required[categoryName][itemName] = itemPrice;
-    //     console.log(itemName);
-    //     console.log(itemPrice);
-    // };
-
     $scope.getMenuItemOptions = function (categoryIndex, menuItemIndex ,menuItemName)
     {
     	// Uses data from the view to get the correct data for the menu item and sets it in the scope
